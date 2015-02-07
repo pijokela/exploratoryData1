@@ -23,5 +23,6 @@ data2$DateTime <- dateTime
 gap <- as.numeric(as.character(data2$Global_active_power))
 data2$GlobalActivePower <- gap
 
+png(filename="plot2.png")
 plot(data2$DateTime, data2$GlobalActivePower, type = "l", ylab="Global active power (kilowatts)", xlab="")
-
+dev.off()

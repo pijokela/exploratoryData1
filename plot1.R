@@ -19,6 +19,6 @@ data2 <- subset(data1, data1$AsDate < as.Date("2007-02-03", format="%Y-%m-%d"))
 gap <- as.numeric(as.character(data2$Global_active_power))
 data2$GlobalActivePower <- gap
 
-
+png(filename="plot1.png")
 hist(data2$GlobalActivePower, col="red", breaks=12, main="Global active power", ylab="Frequency", xlab="Global active power (kilowatts)")
 
